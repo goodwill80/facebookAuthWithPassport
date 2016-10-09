@@ -25,6 +25,7 @@ mongoose.connect(secret.database, function(err){
   }
 });
 
+//*****Order of the below middleware is extremely important!
 //teach express server where to find public folder
 app.use(express.static(__dirname + '/public'));
 //Other middlewares
